@@ -7,3 +7,4 @@ tslint.json
 .eslintrc
 postcss.config.js
 .packages.hash
+.npmrc
