@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { WebLibAngularModule } from 'web-lib-angular';
 import { StartComponent } from './components/start/start.component';
+import { MaterialDesignModule } from 'web-lib-angular/src/material-design.module';
 
 @NgModule({
     declarations: [
@@ -24,7 +25,8 @@ import { StartComponent } from './components/start/start.component';
         BrowserAnimationsModule,
         BrowserModule,
         HttpClientModule,
-        WebLibAngularModule
+        WebLibAngularModule,
+        MaterialDesignModule
     ],
     bootstrap: [AppComponent]
 })

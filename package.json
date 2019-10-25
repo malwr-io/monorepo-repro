@@ -115,6 +115,7 @@
     "@angular/core": "next",
     "@angular/forms": "next",
     "@angular/http": "8.0.0-beta.10",
+    "@angular/material": "next",
     "@angular/platform-browser": "next",
     "@angular/platform-browser-dynamic": "next",
     "@angular/router": "next",
