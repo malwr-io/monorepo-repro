@@ -1,0 +1,35 @@
+{
+  "extends": "../../tsconfig-base.json",
+  "compilerOptions": {
+    "noImplicitAny": false,
+    "strictNullChecks": true,
+    "noImplicitReturns": true,
+    "baseUrl": ".",
+    "outDir": ".tmp/code",
+    "typeRoots": [
+      "node_modules/@types",
+      "../../node_modules/@types"
+    ],
+    "paths": {
+      "@angular/*": [
+        "node_modules/@angular/*"
+      ]
+    }
+  },
+  "include": [
+    "src/**/*.ts",
+    "test/e2e/**/*.e2e-spec.ts",
+    "test/e2e/tools/*.ts",
+    "typings/",
+    "../../typings/",
+    "../web-lib-angular/src/**/*.ts"
+  ],
+  "exclude": [
+    "dist",
+    "config",
+    ".tmp"
+  ],
+  "angularCompilerOptions": {
+    "enableIvy": true
+  }
+}

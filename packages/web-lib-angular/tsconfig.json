@@ -1,0 +1,27 @@
+{
+  "extends": "../../tsconfig-base.json",
+  "compilerOptions": {
+    "noImplicitAny": false,
+    "strictNullChecks": true,
+    "noImplicitReturns": true,
+    "baseUrl": ".",
+    "outDir": ".tmp/code",
+    "typeRoots": [
+      "node_modules/@types",
+      "../../node_modules/@types"
+    ],
+    "paths": {
+      "@angular/*": [
+        "node_modules/@angular/*"
+      ]
+    }
+  },
+  "include": [
+    "src/**/*.ts"
+  ],
+  "exclude": [
+    "dist",
+    "config",
+    ".tmp"
+  ]
+}

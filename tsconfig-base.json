@@ -1,0 +1,36 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "removeComments": false,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noEmitHelpers": true,
+    "noEmitOnError": true,
+    "importHelpers": true,
+    "noImplicitAny": false,
+    "strictNullChecks": false,
+    "strictPropertyInitialization": false,
+    "pretty": true,
+    "sourceMap": true,
+    "declaration": false,
+    "preserveConstEnums": true,
+    "lib": [
+        "dom",
+        "es2015",
+        "es2017.object",
+        "es2017.string"
+    ],
+    "typeRoots": [
+        "./typings/",
+        "./node_modules/@types"
+    ]
+  },
+  "compileOnSave": false,
+  "buildOnSave": false
+}

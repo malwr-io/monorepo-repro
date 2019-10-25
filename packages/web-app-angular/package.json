@@ -1,0 +1,45 @@
+{
+  "name": "web-app-angular",
+  "version": "0.0.0-PLACEHOLDER",
+  "private": true,
+  "engines": {
+    "node": "^8.10.0"
+  },
+  "license": "UNLICENSED",
+  "main": "dist/index.js",
+  "scripts": {
+    "ci": "npm run clean && npm run lint && npm run test && npm run build:prod",
+    "build:dev": "webpack --config config/webpack.dev.ts --colors --hide-modules --display-error-details --profile --display-entrypoints",
+    "build:prod": "webpack --config config/webpack.prod.ts --bail",
+    "build": "npm run clean && npm run build:prod",
+    "dev": "webpack-dev-server --config config/webpack.dev.ts --colors --hot",
+    "start": "npm run dev",
+    "webpack:debug": "node --inspect-brk ../../node_modules/webpack/bin/webpack.js",
+    "webpack-dev-server:debug": "node --inspect-brk ../../node_modules/webpack-dev-server/bin/webpack-dev-server",
+    "lint:ts": "tslint -c tslint.json src/**/*.ts",
+    "lint:ts:fix": "tslint --fix -t codeFrame 'src/**/*.ts'",
+    "lint": "npm run lint:ts",
+    "typecheck": "tsc --noEmit",
+    "serve": "cross-env IS_LOCAL=true ts-node ../../ci/serve",
+    "serve:build": "npm run build:prod && npm run serve",
+    "compile": "npm run clean:ts:cache && tsc",
+    "clean": "npm run clean:dist && npm run clean:cache",
+    "clean:dist": "rimraf dist",
+    "clean:cache": "rimraf .tmp",
+    "clean:ts:cache": "rimraf .tmp/code",
+    "clean:testresults": "rimraf .test_results"
+  },
+  "devDependencies": {
+    "@angular-devkit/build-optimizer": "next",
+    "@angular/cli": "next",
+    "@angular/compiler-cli": "next",
+    "@ngtools/webpack": "next",
+    "node-sass": "4.12.0",
+    "sass-loader": "8.0.0",
+    "to-string-loader": "1.1.5"
+  },
+  "dependencies": {
+    "web-lib-angular": "file:../web-lib-angular",
+    "normalize.css": "8.0.1"
+  }
+}

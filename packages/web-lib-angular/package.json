@@ -1,0 +1,39 @@
+{
+  "name": "web-lib-angular",
+  "version": "0.0.0-PLACEHOLDER",
+  "private": true,
+  "engines": {
+    "node": "^8.10.0"
+  },
+  "license": "UNLICENSED",
+  "main": "src/index.ts",
+  "scripts": {
+    "ci": "npm run clean && npm run lint && npm run test && npm run build:prod",
+    "build:dev": "exit 0",
+    "build:dev:watch": "exit 0",
+    "build:prod": "exit 0",
+    "build": "exit 0",
+    "dev": "exit 0",
+    "lint:ts": "tslint -c tslint.json src/**/*.ts",
+    "lint:ts:fix": "tslint --fix -t codeFrame 'src/**/*.ts'",
+    "lint": "npm run lint:ts",
+    "test": "exit 0",
+    "compile": "npm run clean:cache && tsc",
+    "clean": "npm run clean:dist && npm run clean:cache",
+    "clean:dist": "rimra -- dist",
+    "clean:cache": "rimraf -- .tmp",
+    "webpack:debug": "node -r ts-node/register --inspect --debug-brk --max_old_space_size=4096 node_modules/webpack/bin/webpack.js",
+    "prepublishOnly": "node --eval \"console.error('ERROR: Trying to publish a package that has been compiled by NGCC. This is not allowed.\\nPlease delete and rebuild the package, without compiling with NGCC, before attempting to publish.\\nNote that NGCC may have been run by importing this package into another project that is being built with Ivy enabled.\\n')\" && exit 1"
+  },
+  "dependencies": {},
+  "devDependencies": {},
+  "__processed_by_ivy_ngcc__": {
+    "fesm2015": "9.0.0-next.13",
+    "fesm5": "9.0.0-next.13",
+    "es2015": "9.0.0-next.13",
+    "esm2015": "9.0.0-next.13",
+    "esm5": "9.0.0-next.13",
+    "main": "9.0.0-next.13",
+    "module": "9.0.0-next.13"
+  }
+}
