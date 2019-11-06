@@ -30,10 +30,6 @@
     "clean:testresults": "rimraf .test_results"
   },
   "devDependencies": {
-    "@angular-devkit/build-optimizer": "next",
-    "@angular/cli": "next",
-    "@angular/compiler-cli": "next",
-    "@ngtools/webpack": "next",
     "node-sass": "4.12.0",
     "sass-loader": "8.0.0",
     "to-string-loader": "1.1.5"
